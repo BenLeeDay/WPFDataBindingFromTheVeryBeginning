@@ -12,7 +12,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBox Name="TextBox1" Width="300" Height="150" TextWrapping="Wrap"
-                 Text="{Binding ExampleString}"/>
+                 Text="{Binding ExampleString, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Name="TextBox2" Width="300" Height="150" TextWrapping="Wrap" Grid.Row="2" 
                  Text="{Binding ExampleString}" />
     </Grid>
