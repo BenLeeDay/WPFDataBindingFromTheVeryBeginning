@@ -1,8 +1,6 @@
-﻿using System.ComponentModel;
-
-namespace DataBindingExercise
+﻿namespace DataBindingExercise
 {
-    public class ViewModel : INotifyPropertyChanged
+    public class ViewModel
     {
         #region Fields
         private string _exampleString;
@@ -22,17 +20,7 @@ namespace DataBindingExercise
             set
             {
                 _exampleString = value;
-                OnPropertyChanged("ExampleString");
             }
-        }
-        #endregion
-
-        #region INotifyPropertyChanged members
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyChanged(string v)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(v));
         }
         #endregion
     }
